@@ -1,8 +1,7 @@
 function input(newResult){
-	newResult.num1 = document.getElementById('input1').value;
-	newResult.num2 = document.getElementById('input2').value;
+	newResult.num1 = parseInt(document.getElementById('input1').value);
+	newResult.num2 = parseInt(document.getElementById('input2').value);
 	newResult.calc = document.getElementById('calc').value;
-	alert('num1 in input ='+newResult.num1);
 	return newResult;
 }
 	
@@ -14,6 +13,7 @@ function calculator(){
 	};
 	result = input(result);
 	var sum = result.num1 + result.num2;
+	alert('type of num1 ='+typeof(result.num1));
 	alert('num1='+result.num1);
 	alert('sum='+sum);
 }
